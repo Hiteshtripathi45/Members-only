@@ -1,0 +1,59 @@
+# Node modules (dependencies installed via npm/yarn)
+node_modules/
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+.log
+
+# Environment variables (store secrets safely)
+.env
+.env.local
+.env.*.local
+
+# Cache directories
+.cache/
+.npm/
+.yarn/
+.pnp.cjs
+.pnp.loader.mjs
+dist/       # Ignore build output (if applicable)
+
+# OS-specific files
+.DS_Store   # macOS
+Thumbs.db   # Windows
+
+# Editor & IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing & Coverage
+coverage/
+jest/
+test-results/
+
+# Build artifacts (for frameworks like Next.js, React, etc.)
+.next/
+out/
+build/
+
+# Dependency lock files (only if you want to prevent accidental updates)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript
+*.tsbuildinfo
+
+# Git merge conflict files
+*.orig
+
+# Other unnecessary files
+
+build/
+
+
