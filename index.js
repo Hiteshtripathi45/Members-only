@@ -5,6 +5,7 @@ const user= require('./routes/user.router')
 const messagerouter = require('./routes/message.router')
 const cookieParser = require("cookie-parser");
 const path = require('path')
+const port = process.env.PORT || 3000;
 
 app.use((req, res, next) => {
     res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
@@ -21,4 +22,4 @@ app.use('/',user)
 app.use('/',messagerouter)
 app.get('/',(req,res)=>res.send('hello'))
 
-app.listen(process.env.PORT,()=>console.log('server is runing'))
+app.listen(port,()=>console.log('server is runing'))
