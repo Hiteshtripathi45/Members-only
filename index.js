@@ -20,6 +20,6 @@ app.set('view engine','ejs')
 
 app.use('/',user)
 app.use('/',messagerouter)
-app.get('/',(req,res)=>res.send('hello'))
+app.get('/',(req,res)=>res.redirect('/home'))
 
 app.listen(port,()=>console.log('server is runing'))
