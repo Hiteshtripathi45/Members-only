@@ -1,13 +1,24 @@
 const express = require('express')
 const app = express()
+require('dotenv').config();
 const user= require('./routes/user.router')
+const messagerouter = require('./routes/message.router')
+const cookieParser = require("cookie-parser");
+const path = require('path')
 
+app.use((req, res, next) => {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    next();
+});
 app.use(express.json())
+app.use(cookieParser());
 app.use(express.urlencoded({extended:true}))
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine','ejs')
 
 
 app.use('/',user)
+app.use('/',messagerouter)
 app.get('/',(req,res)=>res.send('hello'))
 
-app.listen(3000,()=>console.log('server is runing'))
+app.listen(process.env.PORT,()=>console.log('server is runing'))
