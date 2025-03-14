@@ -53,11 +53,11 @@ router.post('/login', async (req, res) => {
         }
         const token = jwt.sign({ id: user.rows[0].id, email }, process.env.JWT_SECRET || 'your-default-secret-key', { expiresIn: "1h" });
         res.cookie("token", token, { httpOnly: true });
-        res.redirect("/home");
+        return res.redirect("/home");
     } catch (error) {
         console.error('this is error', error)
         res.status(500).send('error during logging')
-        res.redirect('/login')
+        return res.redirect('/login')
     }
 })
 
