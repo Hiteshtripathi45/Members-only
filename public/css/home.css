@@ -1,0 +1,131 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #1e1e2f; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #2a2a40; /* Slightly lighter dark background */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff6f61; /* Coral accent color */
+}
+
+.intro h2 {
+    font-size: 18px;
+    color: #a1a1a1;
+}
+
+
+.messages {
+    width: 90%;
+    max-width: 800px;
+    background-color: #2a2a40;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    animation: slideIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mess {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #3a3a5a; 
+    border-radius: 10px;
+    border-left: 5px solid #ff6f61; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mess:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.mess h2 {
+    font-size: 20px;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.mess p {
+    font-size: 16px;
+    color: #e0e0e0; 
+    margin-bottom: 5px;
+}
+
+.mess p strong {
+    color: #ff6f61; 
+}
+
+.mess:last-child {
+    margin-bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 20px;
+    }
+
+    .intro h2 {
+        font-size: 16px;
+    }
+
+    .mess h2 {
+        font-size: 18px;
+    }
+
+    .mess p {
+        font-size: 14px;
+    }
+}

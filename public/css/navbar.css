@@ -1,0 +1,93 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #1e1e2f; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a40; /* Slightly lighter dark background */
+    padding: 20px 50px; /* Increased padding for a wider navbar */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-width: 50vh; /* Set a max-width for the navbar */
+    margin: 0 auto; /* Center the navbar horizontally */
+    gap: 10px;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #ff6f61; /* Coral accent color */
+    margin: 0;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    background-color: #ff6f61; /* Coral accent color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e65a50; /* Darker coral on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.btn:active {
+    transform: translateY(0); /* Reset lift effect */
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 30px; /* Adjusted padding for smaller screens */
+    }
+
+    nav h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 20px; /* Further adjusted padding for mobile screens */
+    }
+
+    nav h1 {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
