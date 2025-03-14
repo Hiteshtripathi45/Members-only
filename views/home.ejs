@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Home</title>
+</head>
+<body>
+    <%- include('navbar',{auths:auths} ) %>
+    <div class="intro">
+        <h1>Hello Hitesh here! This is a members-only app. To join the group, you need to enter a password.</h1>
+        <h2>Visit my GitHub repo and check the README for the password.</h2>
+    </div>
+    <div class="messages">
+        <%if(!joined){%>
+            <button class="btn"><a href="/join">join</a></button>
+        <%}
+        else{%>
+            <button class="btn"><a href="/createmessages">CREATEMESSAGE</a></button>
+        <%}%>
+
+        <% messages.forEach(message => { %>
+            <div class="mess">
+                <h2><strong>TITLE:</strong> <%= message.title %></h2>
+                <p><%= message.message %></p>
+                <p><strong>Posted by:</strong> <%= message.name %></p>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
