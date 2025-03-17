@@ -53,6 +53,19 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+.btnn {
+    background-color: #e52f13;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+.btnn:hover {
+    background-color: #e60b0b;
+}
 
 
 .mess {

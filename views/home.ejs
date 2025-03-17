@@ -14,10 +14,10 @@
     </div>
     <div class="messages">
         <%if(!joined){%>
-            <button class="btn"><a href="/join">join</a></button>
+            <a href="/join"><button class="btnn">join</button></a>
         <%}
         else{%>
-            <button class="btn"><a href="/createmessages">CREATEMESSAGE</a></button>
+            <a href="/createmessages"><button class="btnn">CREATEMESSAGES</button></a>
         <%}%>
 
         <% messages.forEach(message => { %>

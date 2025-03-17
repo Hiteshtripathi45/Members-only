@@ -11,12 +11,12 @@
         <h1>Members-Only</h1>
         <% if (auths) { %>
             <div>
-                <button class="btn"><a href="/logout">LOGOUT</a></button>
+                <a href="/logout"><button class="btn">LOGOUT</button></a>
             </div>
         <% } else { %>
             <div>
-                <button class="btn"><a href="/login">LOGIN</a></button>
-                <button class="btn"><a href="/signup">SIGN-UP</a></button>
+                <a href="/login"><button class="btn">LOGIN</button></a>
+                <a href="/signup"><button class="btn">SIGNUP</button></a>
             </div>
         <% } %>
 
